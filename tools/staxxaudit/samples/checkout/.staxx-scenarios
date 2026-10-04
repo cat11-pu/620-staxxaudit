@@ -1,0 +1,69 @@
+{
+  "name": "staxx-sample",
+  "description": "Sample staxx deployment manifest used by the preflight audit",
+  "scenarios": [
+    {
+      "name": "deploy-testchain",
+      "description": "General testchain deployment",
+      "run": "deploy-testchain.sh",
+      "configPath": "configs/step-01.json",
+      "outPath": "out/addresses.json"
+    },
+    {
+      "name": "deploy-testchain",
+      "description": "General testchain deployment retry",
+      "run": "deploy-testchain.sh",
+      "configPath": "configs/step-01.json",
+      "outPath": "out/addresses.json"
+    },
+    {
+      "name": "oracle-setup",
+      "description": "Oracle wiring",
+      "run": "",
+      "configPath": "configs/step-02.json",
+      "outPath": "out/oracles.json"
+    },
+    {
+      "name": "flip-auctions",
+      "description": "Flip auction deployment",
+      "run": "deploy-flip.sh",
+      "configPath": "configs/missing.json",
+      "outPath": "out/addresses.json"
+    },
+    {
+      "name": "broken-config",
+      "description": "Scenario whose config does not parse",
+      "run": "deploy-broken.sh",
+      "configPath": "configs/broken.json",
+      "outPath": "out/addresses.json"
+    },
+    {
+      "name": "escape-out",
+      "description": "Out path pointing outside the checkout",
+      "run": "deploy-escape.sh",
+      "configPath": "configs/step-01.json",
+      "outPath": "../../escaped/addresses.json"
+    },
+    {
+      "name": "",
+      "description": "Anonymous scenario without a name or out path",
+      "run": "deploy-anon.sh",
+      "configPath": "configs/step-02.json",
+      "outPath": ""
+    },
+    {
+      "name": "oracle-verify",
+      "description": "Oracle verification pass",
+      "run": "verify-oracles.sh",
+      "configPath": "configs/step-02.json",
+      "outPath": "out/oracles.json"
+    },
+    {
+      "name": "absolute-out",
+      "description": "Out path pinned to a host absolute path",
+      "run": "deploy-abs.sh",
+      "configPath": "configs/step-01.json",
+      "outPath": "/tmp/addresses.json"
+    }
+  ]
+}

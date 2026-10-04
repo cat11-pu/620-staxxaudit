@@ -1,0 +1,20 @@
+{
+  "description": "General testchain deployment",
+  "defaults": {
+    "osmDelay": "1"
+  },
+  "roles": [
+    "CREATOR"
+  ],
+  "omniaFromAddr": "0xdc9A20F5a46AFE0802b361076BeFC51f787B2e58",
+  "oracles": [
+    {
+      "symbol": "ETH",
+      "contract": "MEDIANIZER_ETH"
+    }
+  ],
+  "ilks": [
+    "ETH-A"
+  ],
+  "pauseDelay": "0"
+}

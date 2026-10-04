@@ -1,0 +1,10 @@
+{
+  "description": "Oracle wiring",
+  "defaults": {},
+  "roles": [
+    "CREATOR",
+    "CDP_OWNER"
+  ],
+  "omniaFromAddr": "0xdc9A20F5a46AFE0802b361076BeFC51f787B2e58",
+  "pauseDelay": "2"
+}

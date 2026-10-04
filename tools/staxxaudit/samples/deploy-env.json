@@ -1,0 +1,8 @@
+{
+  "ETH_FROM": "0x980957073687abbfc85609ecd7c118d2b7506a17",
+  "ETH_GAS": 7000000,
+  "ETH_RPC_URL": "http://localhost:8545",
+  "EMPTY_OK": "",
+  "COIN-NAME": "dai",
+  "1BAD": "x"
+}
